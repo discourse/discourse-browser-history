@@ -5,6 +5,9 @@
 
 DiscoursePluginRegistry.serialized_current_user_fields << "protect_history"
 
-register_asset "javascripts/templates/discourse_history_checkbox.js.handlebars"
-register_asset "javascripts/views/history_checkbox_view.js"
+after_initialize do
+  User.register_custom_field_type('protect_history', :boolean)
+end
+
+register_asset "javascripts/connectors/user_custom_preferences/protect_history.js.handlebars"
 register_asset "javascripts/initializers/discourse_history.js.es6"
