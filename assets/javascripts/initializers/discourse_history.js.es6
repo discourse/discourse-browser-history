@@ -1,8 +1,11 @@
+import User from 'discourse/models/user';
+import TopicRoute from 'discourse/routes/topic';
+
 export default {
   name: "discourse_history",
   initialize: function() {
-    if(Discourse.User.currentProp("custom_fields.protect_history") === true){
-      Discourse.TopicRoute.disableReplaceState = true;
+    if(User.currentProp("custom_fields.protect_history") === true){
+      TopicRoute.disableReplaceState = true;
     }
   }
 };
