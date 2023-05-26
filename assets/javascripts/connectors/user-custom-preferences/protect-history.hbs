@@ -1,6 +1,9 @@
-<div class='controls'>
-  <label class='checkbox-label'>
-    {{input type="checkbox" checked=controller.model.custom_fields.protect_history}}
+<div class="controls">
+  <label class="checkbox-label">
+    <Input
+      @type="checkbox"
+      @checked={{controller.model.custom_fields.protect_history}}
+    />
     Don't update URL while scrolling through topics
   </label>
 </div>
