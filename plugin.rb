@@ -1,5 +1,6 @@
 # name: History
-# about: Avoid using replace state when navigating through topics
+# about: Suppresses updating of URL during topic navigation.
+# meta_topic_id: 16428
 # version: 0.1
 # authors: Sam Saffron
 
